@@ -1,10 +1,26 @@
 import React, { useState } from "react";
 import Card from "../UI/Card";
+import styled from "styled-components";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
 import ExpensesChart from "./ExpensesChart";
-import "./ExpenseItemList.css";
+// import "./ExpenseItemList.css";
 
+const StyledCard = styled(Card)`
+  padding: 1rem;
+  background-color: #fff;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  & .chart {
+    display: none;
+  }
+  @media only screen and (min-width: 768px) {
+    & .chart {
+      display: flex;
+    }
+  }
+`;
 const ExpenseItemList = ({ expenses }) => {
   const [filteredYear, setFilteredYear] = useState("2020");
 
@@ -17,14 +33,14 @@ const ExpenseItemList = ({ expenses }) => {
   });
 
   return (
-    <Card className="expenses">
+    <StyledCard className="expenses">
       <ExpensesFilter
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      <ExpensesChart expenses={filteredExpenses} />
+      <ExpensesChart className="chart" expenses={filteredExpenses} />
       <ExpensesList expenses={filteredExpenses} />
-    </Card>
+    </StyledCard>
   );
 };
 
