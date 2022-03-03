@@ -3,6 +3,18 @@ import ExpenseItemList from "./components/Expenses/ExpenseItemList";
 import NewExpense from "./components/NewExpense/NewExpense";
 import React, { useState } from "react";
 
+const BudgetCategories = [
+  "Housing",
+  "Transportation",
+  "Groceries",
+  "Utilities",
+  "Insurance",
+  "Medical & Healthcare",
+  "Saving, Investing, and Debt Payments",
+  "Personal Spending",
+  "Recreation & Entertainment",
+  "Miscellaneous"
+];
 const DUMMY_EXPENSES = [
   {
     id: "e1",
