@@ -47,7 +47,10 @@ const App = () => {
 
   return (
     <div className="main">
-      <NewExpense onAddExpense={addExpenseHandler} />
+      <NewExpense
+        onAddExpense={addExpenseHandler}
+        categories={BudgetCategories}
+      />
       <ExpenseItemList expenses={expenses} />
     </div>
   );

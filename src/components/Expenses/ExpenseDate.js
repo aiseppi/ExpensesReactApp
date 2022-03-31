@@ -8,7 +8,7 @@ const ExpenseDate = (props) => {
     width: 5.5rem;
     height: 5.5rem;
     border: 1px solid #ececec;
-    background-color: #41436a;
+    background-color: #a69286;
     color: white;
     border-radius: 12px;
     align-items: center;

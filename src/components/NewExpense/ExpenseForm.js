@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { styles } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button/Button";
+import { FormControl, Select, InputLabel, MenuItem } from "@material-ui/core";
+// import Select from "@material-ui/core";
+// import InputLabel from "@material-ui/core";
 // import "./ExpenseForm.css";
 
 let StyledButton = styled(Button)`
@@ -42,10 +45,11 @@ let ExpenseControls = styled.div`
     max-width: 100%;
   }
 `;
-const ExpenseForm = ({ onCancel, onSaveExpenseData }) => {
+const ExpenseForm = ({ onCancel, onSaveExpenseData, expenseTypes }) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  console.log(expenseTypes);
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -74,7 +78,6 @@ const ExpenseForm = ({ onCancel, onSaveExpenseData }) => {
     setEnteredDate("");
   };
 
-  // let expandedView = (eeee);
   return (
     <form onSubmit={submitHandler}>
       <ExpenseControl>
@@ -106,6 +109,20 @@ const ExpenseForm = ({ onCancel, onSaveExpenseData }) => {
             onChange={dateChangeHandler}
           />
         </ExpenseControls>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Category</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value="Category"
+            label="Age"
+            // onChange={}
+          >
+            {/* {expenseTypes.forEach((expense) => {
+              <MenuItem value={expense}>expense</MenuItem>;
+            })} */}
+          </Select>
+        </FormControl>
       </ExpenseControl>
 
       <div className="new-expense__actions">

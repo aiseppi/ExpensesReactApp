@@ -8,7 +8,7 @@ import ExpensesChart from "./ExpensesChart";
 
 const StyledCard = styled(Card)`
   padding: 1rem;
-  background-color: #fff;
+  background-color: rgb(0, 0, 0, 0.6);
   margin: 2rem auto;
   width: 50rem;
   max-width: 95%;
