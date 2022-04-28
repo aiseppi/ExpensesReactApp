@@ -4,7 +4,6 @@ import styled from "styled-components";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
 import ExpensesChart from "./ExpensesChart";
-// import "./ExpenseItemList.css";
 
 const StyledCard = styled(Card)`
   padding: 1rem;

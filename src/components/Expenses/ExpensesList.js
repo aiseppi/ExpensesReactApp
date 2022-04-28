@@ -1,11 +1,8 @@
 import React from "react";
 import ExpenseItem from "./ExpenseItem";
-// import "./ExpensesList.css";
 import styled from "styled-components";
 
 export default function ExpensesList({ expenses }) {
-  //if your ENTIRE JSX content changes as a result of a condition, you can add an if
-  //check where you return as JSX block.
   const StyledUl = styled.ul`
     list-style: none;
     padding: 0;

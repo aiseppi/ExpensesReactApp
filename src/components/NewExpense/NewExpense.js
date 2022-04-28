@@ -8,11 +8,8 @@ const NewExpense = ({ onAddExpense, categories }) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const StyledDiv = styled.div`
-    /* background-color: #fff;
-     */
     background-color: rgb(0, 0, 0, 0.6);
     padding: 1rem;
-    margin: 0 auto;
     width: 50rem;
     max-width: 95%;
     border-radius: 12px;
@@ -28,7 +25,11 @@ const NewExpense = ({ onAddExpense, categories }) => {
       background-color: #735a4c;
       color: white;
       border-radius: 12px;
-      margin-right: 1rem;
+      margin: 0.5rem 0;
+
+      @media (min-width: 580px) {
+        margin: 0.5rem;
+      }
     }
 
     & Button:hover,

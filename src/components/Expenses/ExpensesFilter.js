@@ -1,6 +1,4 @@
 import React from "react";
-
-// import "./ExpensesFilter.css";
 import styled from "styled-components";
 
 const ExpensesFilter = (props) => {
